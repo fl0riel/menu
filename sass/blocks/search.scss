@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.search {
+  position: relative;
+  display: flex;
+
+  &__field {
+    padding: 10px 40px 10px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Proxima Nova Light", "Geneva", sans-serif;
+    border: 1px solid $main-title-color;
+    border-radius: 2px;
+
+    &::-webkit-input-placeholder {
+      color: $main-title-color;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    &::-moz-placeholder {
+      color: $main-title-color;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    &:-ms-input-placeholder {
+      color: $main-title-color;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .search {
+    margin-left: 20px;
+
+    &__field {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .search {
+    flex-grow: 1;
+    margin-left: 0;
+  }
+}

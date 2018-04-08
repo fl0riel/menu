@@ -1,0 +1,83 @@
+@import "variables.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Proxima Nova Light", "Geneva", sans-serif;
+  color: $main-color;
+}
+
+a {
+  color: $main-title-color;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Proxima Nova Light", "Geneva", sans-serif;
+  color: $main-second-color;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  background-color: $main-active-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: saturate($main-active-color, 20%);
+  }
+
+  &:active {
+    color: rgba($main-second-color, 0.3);
+    background-color: darken($main-active-color, 10%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    //padding-right: 30px;
+    //padding-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}

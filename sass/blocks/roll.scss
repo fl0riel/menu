@@ -1,0 +1,62 @@
+@import "../variables.scss";
+
+.roll {
+  //
+
+  &__item {
+    border-bottom: 1px solid lighten($main-title-color, 55%);
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    font-family: "PT Sans Regular", "Arial Black", sans-serif;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .roll {
+    //
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .roll {
+    &__item {
+      width: 100%;
+
+      &--moiety {
+        width: 45%;
+        margin-right: 10%;
+
+        &:nth-last-of-type(2n),
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &--more {
+        margin-left: auto;
+        border: none;
+      }
+    }
+
+    &__link {
+      font-weight: 700;
+      font-size: 15px;
+
+      &--more {
+        font-weight: 400;
+        color: $main-second-color;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
