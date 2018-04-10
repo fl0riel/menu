@@ -4,17 +4,32 @@
   //
 
   &__item {
-    border-bottom: 1px solid lighten($main-title-color, 55%);
+    //border-bottom: 1px solid lighten($main-title-color, 55%);
   }
 
   &__link {
     display: flex;
     width: 100%;
     padding: 15px 0;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 14px;
     line-height: 1;
-    font-family: "PT Sans Regular", "Arial Black", sans-serif;
+    font-family: "Proxima Nova Light", "Geneva", sans-serif;
+    color: $main-color;
+    border-bottom: 1px solid lighten($main-active-color, 30%);
+
+    &--offer {
+      color: $active-link-color;
+      fill: $active-link-color;
+    }
+
+    &:hover {
+      color: $active-link-color;
+    }
+  }
+
+  &__icon {
+    display: none;
   }
 }
 
@@ -26,36 +41,70 @@
 
 @media (min-width: $desktop-width) {
   .roll {
-    &__item {
+    padding: 10px 0;
+
+    &--one-of-three .roll__item {
+      width: 30%;
+      margin-right: 3%;
+    }
+
+    &--one-of-three .roll__item--more,
+    .roll__item--more {
       width: 100%;
+      margin-right: 0;
+      padding-left: 0;
+    }
 
-      &--moiety {
-        width: 45%;
-        margin-right: 10%;
+    &--highlight {
+      padding: 10px 30px;
+      background-color: lighten($main-active-color, 35%);
+    }
 
-        &:nth-last-of-type(2n),
-        &:last-child {
-          margin-right: 0;
+    &--highlight .roll__item:last-child {
+      margin-bottom: 0;
+    }
+
+    &__item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &--more .roll__link {
+        font-size: 18px;
+        color: $main-second-color;
+        border-bottom: none;
+
+        &:hover {
+          color: $link-hover-color;
         }
-      }
-
-      &--more {
-        margin-left: auto;
-        border: none;
       }
     }
 
     &__link {
-      font-weight: 700;
-      font-size: 15px;
+      display: inline;
+      padding: 0;
 
-      &--more {
-        font-weight: 400;
-        color: $main-second-color;
+      //&--more {
+      //  font-weight: 400;
+      //  color: $main-second-color;
+      //}
+    }
+
+    &__icon {
+      position: absolute;
+      display: flex;
+
+      &--promotion {
+        width: 14px;
+        height: 14px;
+        top: 8px;
+        left: 0;
       }
 
-      &:hover {
-        text-decoration: underline;
+      svg {
+        width: 100%;
+        height: 100%;
       }
     }
   }

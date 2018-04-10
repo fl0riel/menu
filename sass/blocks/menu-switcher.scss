@@ -1,0 +1,115 @@
+@import "../variables.scss";
+
+.menu-switcher {
+  //
+
+  &__toggle,
+  &__controls {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu-switcher {
+    //
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu-switcher {
+    overflow: hidden;
+
+    &__group {
+      display: flex;
+      width: 600%; //Зависит от количества пунктов меню, 6 = 600, 3 = 300
+    }
+
+    &__controls {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    &__control {
+      position: relative;
+      padding: 10px;
+      font: 400 12px/1 "PT Sans Regular", "Arial Black", sans-serif;
+      color: $main-second-color;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-bottom: 1px solid #e5e5e5;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: #1f8ceb;
+        border-radius: 1px 1px 0 0;
+        transition: width 0.2s, margin-left 0.2s;
+      }
+    }
+
+    &__unit {
+      width: 100%;
+    }
+
+    &__toggle:nth-child(1):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(1)::before,
+    &__toggle:nth-child(2):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(2)::before,
+    &__toggle:nth-child(3):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(3)::before,
+    &__toggle:nth-child(4):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(4)::before,
+    &__toggle:nth-child(5):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(5)::before,
+    &__toggle:nth-child(6):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(6)::before,
+    &__toggle:nth-child(7):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(7)::before,
+    &__toggle:nth-child(8):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(8)::before,
+    &__toggle:nth-child(9):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(9)::before,
+    &__toggle:nth-child(10):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(10)::before {
+      width: 100%;
+      margin-left: -50%;
+      transition: width 0.2s, margin-left 0.2s;
+    }
+
+    &__toggle:nth-child(1):checked ~ .menu-switcher__group {
+      margin-left: 0;
+    }
+
+    &__toggle:nth-child(2):checked ~ .menu-switcher__group {
+      margin-left: -100%;
+    }
+
+    &__toggle:nth-child(3):checked ~ .menu-switcher__group {
+      margin-left: -200%;
+    }
+
+    &__toggle:nth-child(4):checked ~ .menu-switcher__group {
+      margin-left: -300%;
+    }
+
+    &__toggle:nth-child(5):checked ~ .menu-switcher__group {
+      margin-left: -400%;
+    }
+
+    &__toggle:nth-child(6):checked ~ .menu-switcher__group {
+      margin-left: -500%;
+    }
+
+    &__toggle:nth-child(7):checked ~ .menu-switcher__group {
+      margin-left: -600%;
+    }
+
+    &__toggle:nth-child(8):checked ~ .menu-switcher__group {
+      margin-left: -700%;
+    }
+
+    &__toggle:nth-child(9):checked ~ .menu-switcher__group {
+      margin-left: -800%;
+    }
+
+    &__toggle:nth-child(10):checked ~ .menu-switcher__group {
+      margin-left: -900%;
+    }
+  }
+}
