@@ -16,7 +16,8 @@
     line-height: 1;
     font-family: "Proxima Nova Light", "Geneva", sans-serif;
     color: $main-color;
-    border-bottom: 1px solid lighten($main-active-color, 30%);
+    //border-bottom: 1px solid lighten($main-active-color, 30%);
+    text-shadow: 0 5px 0 lighten($main-active-color, 28%);
 
     &--offer {
       color: $active-link-color;
@@ -82,11 +83,13 @@
 
       &--more .roll__link {
         position: relative;
+        display: inline;
         padding-right: 30px;
         font-size: 18px;
         color: $main-second-color;
         fill: $main-second-color;
         border-bottom: none;
+        text-shadow: none;
         overflow: hidden;
 
         &:hover {
@@ -97,7 +100,7 @@
     }
 
     &__link {
-      display: inline;
+      display: inline-flex;
       padding: 0;
 
       //&--more {
