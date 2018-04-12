@@ -15,13 +15,17 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .menu-switcher {
     overflow: hidden;
 
     &__group {
       display: flex;
       width: 600%; //Зависит от количества пунктов меню, 6 = 600, 3 = 300
+
+      &--child {
+        width: 500%;
+      }
     }
 
     &__controls {

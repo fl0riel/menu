@@ -153,7 +153,6 @@
     padding-bottom: 10px;
     font: 500 18px/1 "PT Sans Regular", "Arial Black", sans-serif;
     color: $main-second-color;
-    //border-bottom: 2px solid $main-title-color;
   }
 
   &__roll {
@@ -316,6 +315,11 @@
         padding-left: 5px;
         padding-right: 15px;
       }
+
+      &:hover,
+      &:focus {
+        color: $main-second-color;
+      }
     }
 
     &__icon-more {
@@ -354,7 +358,6 @@
       flex-wrap: nowrap;
       width: 100%;
       height: auto;
-      padding: 10px 60px 20px;
       overflow: visible;
     }
 
@@ -363,7 +366,7 @@
     }
 
     &__row {
-      max-width: 730px;
+      max-width: 760px;
       margin-right: 30px;
     }
 
@@ -372,14 +375,6 @@
       justify-content: space-between;
       width: 100%;
     }
-
-    //&__unit {
-    //  display: none;
-    //
-    //  &--checked {
-    //    display: flex;
-    //  }
-    //}
 
     &__unit-header {
       font-size: 20px;
@@ -390,7 +385,6 @@
     }
 
     &__roll {
-      //display: none;
       flex-direction: row;
       flex-wrap: wrap;
       margin-bottom: 0;

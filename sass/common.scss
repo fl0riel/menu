@@ -67,6 +67,24 @@ a {
   }
 }
 
+.icon-container {
+  &:hover .icon {
+    right: 0;
+    transition: right 0.5s linear;
+  }
+
+  .icon {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: auto;
+    transition: right 0.5s linear;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .container {
     //padding-right: 30px;
@@ -76,7 +94,7 @@ a {
 
 @media (min-width: $desktop-width) {
   .container {
-    max-width: 1150px;
+    max-width: 1140px;
     margin: 0 auto;
     padding-right: 50px;
     padding-left: 50px;
