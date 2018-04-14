@@ -3,7 +3,6 @@
 .menu-switcher {
   //
 
-  &__toggle,
   &__controls {
     display: none;
   }
@@ -17,15 +16,10 @@
 
 @media (min-width: $desktop-width) {
   .menu-switcher {
-    overflow: hidden;
+    //
 
     &__group {
       display: flex;
-      width: 600%; //Зависит от количества пунктов меню, 6 = 600, 3 = 300
-
-      &--child {
-        width: 500%;
-      }
     }
 
     &__controls {
@@ -58,7 +52,7 @@
     }
 
     &__unit {
-      width: 100%;
+      display: none;
     }
 
     &__toggle:nth-child(1):checked ~ .menu-switcher__controls .menu-switcher__control:nth-child(1)::before,
@@ -76,44 +70,17 @@
       transition: width 0.2s, margin-left 0.2s;
     }
 
-    &__toggle:nth-child(1):checked ~ .menu-switcher__group {
-      margin-left: 0;
-    }
-
-    &__toggle:nth-child(2):checked ~ .menu-switcher__group {
-      margin-left: -100%;
-    }
-
-    &__toggle:nth-child(3):checked ~ .menu-switcher__group {
-      margin-left: -200%;
-    }
-
-    &__toggle:nth-child(4):checked ~ .menu-switcher__group {
-      margin-left: -300%;
-    }
-
-    &__toggle:nth-child(5):checked ~ .menu-switcher__group {
-      margin-left: -400%;
-    }
-
-    &__toggle:nth-child(6):checked ~ .menu-switcher__group {
-      margin-left: -500%;
-    }
-
-    &__toggle:nth-child(7):checked ~ .menu-switcher__group {
-      margin-left: -600%;
-    }
-
-    &__toggle:nth-child(8):checked ~ .menu-switcher__group {
-      margin-left: -700%;
-    }
-
-    &__toggle:nth-child(9):checked ~ .menu-switcher__group {
-      margin-left: -800%;
-    }
-
-    &__toggle:nth-child(10):checked ~ .menu-switcher__group {
-      margin-left: -900%;
+    &__toggle:nth-child(1):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(1),
+    &__toggle:nth-child(2):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(2),
+    &__toggle:nth-child(3):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(3),
+    &__toggle:nth-child(4):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(4),
+    &__toggle:nth-child(5):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(5),
+    &__toggle:nth-child(6):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(6),
+    &__toggle:nth-child(7):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(7),
+    &__toggle:nth-child(8):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(8),
+    &__toggle:nth-child(9):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(9),
+    &__toggle:nth-child(10):checked ~ .menu-switcher__group .menu-switcher__unit:nth-of-type(10) {
+      display: flex;
     }
   }
 }
